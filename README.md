@@ -2,7 +2,7 @@
 This project is to learn how to implement basic machine learning algorithms from scratch.
 
 ### K-Nearest Neighbours
-The first project I will be implementing is KNN. 
+The first project implemented is KNN. 
 The wine data set was obtained from the UCI Machine Learning Repository (https://archive.ics.uci.edu/ml/
 datasets/wine).
 
@@ -10,14 +10,14 @@ datasets/wine).
 - [ ] Create a report.pdf to show
     - [x] Predicted class labels of each instance in the test set using k=1 with min-max normalization for each feature
     - [x] The classification accuracy for k=1 on the test set with min-max normalization for each feature
-    - [ ] Classification accuracy for k=3, compare against k=1
-    - [ ] Discuss advantages/disadvantages of kNN method.
-    - [ ] Discuss the impact of increasing and decreasing k (too large/small)
-    - [ ] Describe applying k-fold cross validation for the dataset where k=5 (number of folds)
-        - [ ] - State the major steps 
+    - [x] Classification accuracy for k=3, compare against k=1
+    - [x] Discuss advantages/disadvantages of kNN method.
+    - [x] Discuss the impact of increasing and decreasing k (too large/small)
+    - [x] Describe applying k-fold cross validation for the dataset where k=5 (number of folds)
+        - [x] - State the major steps 
 
 
-#### Report Info
+#### KNN Report Info
 (a)
 
 Predicted class labels of each instance with k=1.
@@ -57,5 +57,7 @@ To apply k-fold cross validation with k_folds=5, we need to:
 * Repeat this k (5) times total so each part is used to train once and test k-1 (4) times.
 * Calculate the average MSE, this will be our indication of how well the model will perform on new data.
 
+
+### Decision Tree Report Info
 
 
