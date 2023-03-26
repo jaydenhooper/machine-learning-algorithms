@@ -60,4 +60,80 @@ To apply k-fold cross validation with k_folds=5, we need to:
 
 ### Decision Tree Report Info
 
+(a) The accuracy of my decision tree on the hepatitis data set is 0.7411 (4dp). 
+Considering the baseline accuracy is 0.8, this is a poor result.
+
+HISTOLOGY = True: 
+	SGOT = True: 
+		BILIRUBIN = True: 
+			VARICES = True: 
+				ASCITES = True: 
+					Class die, prob=1
+				ASCITES = False: 
+					Class live, prob=1
+			VARICES = False: 
+				ASCITES = True: 
+					SPIDERS = True: 
+						Class live, prob=0.8
+					SPIDERS = False: 
+						SPLEENPALPABLE = True: 
+							Class live, prob=1
+						SPLEENPALPABLE = False: 
+							Class die, prob=1
+				ASCITES = False: 
+					Class live, prob=0.8
+		BILIRUBIN = False: 
+			Class live, prob=1
+	SGOT = False: 
+		BILIRUBIN = True: 
+			VARICES = True: 
+				ASCITES = True: 
+					Class live, prob=1
+				ASCITES = False: 
+					Class die, prob=1
+			VARICES = False: 
+				ASCITES = True: 
+					SPIDERS = True: 
+						Class live, prob=0.8
+					SPIDERS = False: 
+						SPLEENPALPABLE = True: 
+							Class live, prob=1
+						SPLEENPALPABLE = False: 
+							FIRMLIVER = True: 
+								BIGLIVER = True: 
+									ANOREXIA = True: 
+										Class live, prob=1
+									ANOREXIA = False: 
+										Class die, prob=1
+								BIGLIVER = False: 
+									Class live, prob=0.8
+							FIRMLIVER = False: 
+								Class live, prob=0.8
+				ASCITES = False: 
+					Class live, prob=0.8
+		BILIRUBIN = False: 
+			VARICES = True: 
+				ASCITES = True: 
+					SPIDERS = True: 
+						Class live, prob=1
+					SPIDERS = False: 
+						Class die, prob=1
+				ASCITES = False: 
+					Class live, prob=0.8
+			VARICES = False: 
+				Class live, prob=0.8
+HISTOLOGY = False: 
+	Class live, prob=1
+
+
+(b) (i)
+There are a couple different criteria that can be used to decide which leaves can be pruned:
+* The number of instances in a leaf. If the number of instances is less than a certain threshold, then the leaf can be pruned. This improves resistance to outliers in the training data, making it more generalizable to unseen data.
+* The depth of a leaf. By asking too many questions, we can overfit the data. Hence, if the depth of the leaf is too large, we can prune it.
+
+(b) (ii)
+Pruning reduces the accuracy on the training data because we are re-characterizing the training data. This re-characterization is done to capture the general trends in the data, attempting to ignore the noise.
+
+(b) (iii)
+We expect the accuracy of the test set to increase after pruning. The whole purpose of pruning is to generalize better to unseen data. 
 
