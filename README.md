@@ -137,3 +137,10 @@ Pruning reduces the accuracy on the training data because we are re-characterizi
 (b) (iii)
 We expect the accuracy of the test set to increase after pruning. The whole purpose of pruning is to generalize better to unseen data. 
 
+
+### Perceptron
+
+(a) I would argue the perceptron found a correct set of weights. The accuracy of the perceptron on the training data is 0.8476 (4dp) for a 70%/30% split (training/testing). This is a decent result, as it is better than the baseline accuracy of 0.8. It did not change between different runs.
+
+
+(b) The perceptron is trying to minimize the error in the training data so it will be heavily biased toward this data. Hence, using the same data to measure the performance of the perceptron, will not give us a good indication of how well the perceptron will perform on unseen data.
