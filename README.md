@@ -2,9 +2,6 @@
 This project is to learn how to implement basic machine learning algorithms from scratch.
 
 ### K-Nearest Neighbours
-The first project implemented is KNN. 
-The wine data set was obtained from the UCI Machine Learning Repository (https://archive.ics.uci.edu/ml/
-datasets/wine).
 
 #### TODO 
 - [ ] Create a report.pdf to show
@@ -58,7 +55,7 @@ To apply k-fold cross validation with k_folds=5, we need to:
 * Calculate the average MSE, this will be our indication of how well the model will perform on new data.
 
 
-### Decision Tree Report Info
+### Decision Tree Report
 
 (a) The accuracy of my decision tree on the hepatitis data set is 0.7411 (4dp). 
 Considering the baseline accuracy is 0.8, this is a poor result.
@@ -138,9 +135,33 @@ Pruning reduces the accuracy on the training data because we are re-characterizi
 We expect the accuracy of the test set to increase after pruning. The whole purpose of pruning is to generalize better to unseen data. 
 
 
-### Perceptron
+### Perceptron Report
 
-(a) I would argue the perceptron found a correct set of weights. The accuracy of the perceptron on the training data is 0.8476 (4dp) for a 70%/30% split (training/testing). This is a decent result, as it is better than the baseline accuracy of 0.8. It did not change between different runs.
+(a) I would argue the perceptron found a correct set of weights. The accuracy of the perceptron when training and testing on the same data is 0.8476 (4dp). The accuracy of the perceptron on the after splitting the data is 0.8476 (4dp) for a 70%/30% split (training/testing). These are decent result, as it is better than the baseline accuracy of 0.8. It did not change between different runs.
+
+(b) The perceptron is trying to minimize the error in the training data so it will be heavily biased toward this data. Hence, using the same data to measure the performance of the perceptron will not give us a good indication of how well the perceptron will perform on unseen data.
 
 
-(b) The perceptron is trying to minimize the error in the training data so it will be heavily biased toward this data. Hence, using the same data to measure the performance of the perceptron, will not give us a good indication of how well the perceptron will perform on unseen data.
+Output Requested:
+
+For testing on the data the perceptron was trained on:
+Iterations until convergence 198
+Accuracy: 0.8857142857142857
+Weights:
+ [ 57.        0.        8.30363   2.66221  10.66447   7.97673   0.37107
+  12.36111  15.27071   4.61155  -8.46069  -3.8096   -3.43787  -0.17199
+  11.86249  -9.53405   2.70213   7.9501  -15.27281   2.18966  -0.50453
+ -11.53109  10.82663   8.94307   5.28427   3.6466  -16.03456   0.8899
+   4.54515   6.3531    6.89108   2.30255   1.1352  -12.1055 ]
+
+For train/test split data:
+Iterations until convergence  161
+Accuracy: 0.8476190476190476
+Weights:
+ [ 5.600000e+01  0.000000e+00  9.548790e+00 -4.270000e-01  6.355950e+00
+ -1.761210e+00  4.655940e+00  1.241193e+01  7.564210e+00  6.297910e+00
+ -4.762670e+00  8.344550e+00  3.460230e+00  6.158240e+00  5.105000e-02
+ -1.794331e+01 -1.214350e+00  1.006977e+01 -1.252454e+01  8.160400e-01
+  1.326059e+01 -2.329778e+01  1.116332e+01 -8.378530e+00  1.283087e+01
+  1.682397e+01 -3.029886e+01  1.181260e+00  1.358000e+00  8.817420e+00
+  1.663547e+01  9.731200e-01 -3.044800e-01 -8.508990e+00]
